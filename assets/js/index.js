@@ -1,23 +1,4 @@
-const items = document.querySelectorAll(".a-accordion-item");
 
-items.forEach((item) => {
-  const header = item.querySelector(".a-accordion-header");
-
-  header.addEventListener("click", () => {
-    if (item.classList.contains("active")) {
-      item.classList.remove("active");
-      return;
-    }
-
-    // Закрыть все остальные
-    items.forEach((i) => i.classList.remove("active"));
-
-    // Открыть текущую
-    item.classList.add("active");
-  });
-});
-
-items[0].classList.add("active");
 
 $(function () {
   let Accordion = function (el, multiple) {
