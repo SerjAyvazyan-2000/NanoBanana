@@ -161,7 +161,7 @@ body {
   overflow: hidden;
 }
 
-/* .fade-left,
+.fade-left,
 .fade-right,
 .fade-top,
 .fade-bottom {
@@ -187,7 +187,7 @@ body {
 .show {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-} */
+}
 
 
 .container {
