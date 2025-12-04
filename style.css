@@ -167,7 +167,10 @@ body {
 .fade-bottom {
   opacity: 0;
   transform: translate3d(0, 0, 0);
-  transition: opacity .8s ease, transform .8s ease;
+  transition-property: transform, opacity;
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
 }
 .fade-left {
   transform: translateX(-60px);
