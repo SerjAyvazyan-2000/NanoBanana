@@ -4,7 +4,6 @@ items.forEach((item) => {
   const header = item.querySelector(".a-accordion-header");
 
   header.addEventListener("click", () => {
-    // Если нажали на открытую — просто закрыть её
     if (item.classList.contains("active")) {
       item.classList.remove("active");
       return;
