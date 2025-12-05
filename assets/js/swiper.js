@@ -33,7 +33,6 @@ initSwiper(".styleSwiper", ".style-pagination");
 initSwiper(".wordsSwiper", ".words-pagination");
 
 
-window.addEventListener('load', function () {
   const splide = new Splide('.wordsSplide', {
     type: 'loop',
     gap: '30px',
@@ -41,19 +40,22 @@ window.addEventListener('load', function () {
     pagination: true,
     arrows: false,
     autoHeight: true,
+
     autoWidth: true,
     focus: 'center',
   });
 
   splide.mount();
 
-  splide.refresh();
+    setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+  }, 50);
 
   document.querySelector('.wordsSplide').addEventListener('click', (e) => {
     const slide = e.target.closest('.splide__slide');
     if (!slide) return;
 
     const index = [...slide.parentElement.children].indexOf(slide);
-    splide.go(index);
+
+    splide.go(index); 
   });
-});
