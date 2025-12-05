@@ -56,7 +56,6 @@ function initWordsSplide() {
 
   splide.mount();
 
-  // 1) ЖДЁМ загрузку всех картинок в этом слайдере
   const imgs = container.querySelectorAll("img");
   let loaded = 0;
 
@@ -75,12 +74,10 @@ function initWordsSplide() {
     }
   });
 
-  // Если НЕ было картинок или все уже загружены
   if (imgs.length === 0 || loaded === imgs.length) {
     fixSplide(splide);
   }
 
-  // Клик по боковым
   container.addEventListener("click", (e) => {
     const slide = e.target.closest(".splide__slide");
     if (!slide) return;
@@ -89,7 +86,6 @@ function initWordsSplide() {
   });
 }
 
-// 2) Двойное восстановление карусели
 function fixSplide(splide) {
   setTimeout(() => {
     splide.refresh();
