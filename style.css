@@ -587,6 +587,7 @@ body {
   height: 12px !important;
   border-radius: 100px !important;
   background: #386FDE !important;
+  border-radius: 180px !important;
 
 }
 .splide__pagination__page.is-active{
@@ -609,6 +610,13 @@ body {
   margin: 0 !important;
   background: #e8e8e8 !important;
   opacity: 1 !important;
+    border-radius: 180px !important;
+}
+.splide__pagination li{
+  display: flex;
+}
+.wordsSplide {
+  padding: 0 0 20px 0 ;
 }
 @media (max-width: 1200px) {
   .detailsSwiper .swiper-slide {
