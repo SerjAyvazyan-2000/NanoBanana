@@ -19,6 +19,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -131,9 +133,9 @@
                   src="assets/images/details-slider-img1.webp"
                   alt="details-img1"
                   width="1200"
-                  height="800"
+                  height="660"
                   loading="lazy"
-                  style="width: 100%; height: auto"
+                  style="width: 100%"
                 />
               </div>
               <div class="swiper-slide">
@@ -141,9 +143,9 @@
                   src="assets/images/details-slider-img2.webp"
                   alt="details-img2"
                   loading="lazy"
-                  style="width: 100%; height: auto"
+                  style="width: 100%"
                   width="1200"
-                  height="800"
+                  height="660"
                 />
               </div>
               <div class="swiper-slide">
@@ -151,9 +153,9 @@
                   src="assets/images/details-slider-img3.webp"
                   alt="details-img3"
                   loading="lazy"
-                  style="width: 100%; height: auto"
+                  style="width: 100%"
                   width="1200"
-                  height="800"
+                  height="660"
                 />
               </div>
               <div class="swiper-slide">
@@ -161,9 +163,9 @@
                   src="assets/images/details-slider-img4.webp"
                   alt="details-img4"
                   loading="lazy"
-                  style="width: 100%; height: auto"
+                  style="width: 100%;"
                   width="1200"
-                  height="800"
+                  height="660"
                 />
               </div>
             </div>
@@ -191,7 +193,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
-                  src="assets/images/style-slider-img1..webp"
+                  src="assets/images/style-slider-img1.webp"
                   alt="style-img1"
                   loading="lazy"
                   width="1200"
@@ -327,7 +329,7 @@
               </p>
             </div>
           </div>
-          <div class="swiper wordsSwiper fade-bottom">
+          <!-- <div class="swiper wordsSwiper fade-bottom">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
@@ -360,20 +362,47 @@
                 />
               </div>
 
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/words-slider-img2.webp"
-                  alt="words-img2"
-                  width="1200"
-                  height="800"
-                  style="width: 100%; height: auto"
-                  loading="lazy"
-                />
-              </div>
             </div>
 
             <div class="swiper-pagination words-pagination"></div>
-          </div>
+          </div> -->
+
+          <div class="splide wordsSplide fade-bottom">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img src="assets/images/words-slider-img1.webp"
+             alt="words-img1"
+             loading="lazy"
+             width="1200"
+             height="800"
+             style="width:100%;height:auto;">
+      </li>
+
+      <li class="splide__slide">
+        <img src="assets/images/words-slider-img2.webp"
+             alt="words-img2"
+             loading="lazy"
+             width="1200"
+             height="800"
+             style="width:100%;height:auto;">
+      </li>
+
+      <li class="splide__slide">
+        <img src="assets/images/words-slider-img3.webp"
+             alt="words-img3"
+             loading="lazy"
+             width="1200"
+             height="800"
+             style="width:100%;height:auto;">
+      </li>
+    </ul>
+  </div>
+
+  <div class="splide__pagination words-pagination"></div>
+</div>
+
+
         </section>
 
         <section class="a-faq-section">
@@ -582,6 +611,7 @@
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
 
     <script src="assets/js/swiper.js" defer></script>
     <script src="assets/js/index.js" defer></script>

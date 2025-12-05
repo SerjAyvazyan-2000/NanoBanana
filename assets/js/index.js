@@ -63,76 +63,33 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Fade-left
-  gsap.utils.toArray(".fade-left").forEach((el) => {
-    gsap.fromTo(
-      el,
-      { x: -40, opacity: 0, visibility: "visible" },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-        },
-      }
-    );
-  });
+  const fadeAnimations = [
+    { selector: ".fade-left", from: { x: -40 } },
+    { selector: ".fade-right", from: { x: 40 } },
+    { selector: ".fade-top", from: { y: -40 } },
+    { selector: ".fade-bottom", from: { y: 40 } },
+  ];
 
-  // Fade-right
-  gsap.utils.toArray(".fade-right").forEach((el) => {
-    gsap.fromTo(
-      el,
-      { x: 40, opacity: 0, visibility: "visible" },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-        },
-      }
-    );
-  });
-
-  // Fade-top
-  gsap.utils.toArray(".fade-top").forEach((el) => {
-    gsap.fromTo(
-      el,
-      { y: -40, opacity: 0, visibility: "visible" },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-        },
-      }
-    );
-  });
-
-  // Fade-bottom
-  gsap.utils.toArray(".fade-bottom").forEach((el) => {
-    gsap.fromTo(
-      el,
-      { y: 40, opacity: 0, visibility: "visible" },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-        },
-      }
-    );
+  fadeAnimations.forEach(({ selector, from }) => {
+    gsap.utils.toArray(selector).forEach((el) => {
+      gsap.fromTo(
+        el,
+        { ...from, opacity: 0, visibility: "visible" },
+        {
+          x: 0,
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            end: "bottom 10%",
+            once: true, 
+          
+          },
+        }
+      );
+    });
   });
 });
-

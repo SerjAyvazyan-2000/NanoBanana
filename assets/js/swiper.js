@@ -6,6 +6,9 @@ function initSwiper(selector, paginationSelector) {
     loop: true,
     speed: 600,
     autoHeight:true,
+    slideToClickedSlide: true,
+    
+    
  
 
     pagination: {
@@ -28,3 +31,29 @@ function initSwiper(selector, paginationSelector) {
 initSwiper(".detailsSwiper", ".details-pagination");
 initSwiper(".styleSwiper", ".style-pagination");
 initSwiper(".wordsSwiper", ".words-pagination");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const splide = new Splide('.wordsSplide', {
+    type: 'loop',
+    gap: '30px',
+    speed: 600,
+    pagination: true,
+    arrows: false,
+    autoHeight: true,
+
+    autoWidth: true,
+    focus: 'center',
+  });
+
+  splide.mount();
+
+  document.querySelector('.wordsSplide').addEventListener('click', (e) => {
+    const slide = e.target.closest('.splide__slide');
+    if (!slide) return;
+
+    const index = [...slide.parentElement.children].indexOf(slide);
+
+    splide.go(index); 
+  });
+});
