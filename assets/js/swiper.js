@@ -99,3 +99,16 @@ function fixSplide(splide) {
 }
 
 window.addEventListener("load", initWordsSplide);
+
+
+window.addEventListener("load", () => {
+  splide.refresh();
+});
+
+splide.on("mounted", () => {
+  splide.refresh();
+});
+
+window.addEventListener("load", () => {
+  setTimeout(() => splide.refresh(), 100);
+});
