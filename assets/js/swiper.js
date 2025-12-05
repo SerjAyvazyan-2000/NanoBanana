@@ -5,11 +5,8 @@ function initSwiper(selector, paginationSelector) {
     spaceBetween: 30,
     loop: true,
     speed: 600,
-    autoHeight:true,
+    autoHeight: true,
     slideToClickedSlide: true,
-    
-    
- 
 
     pagination: {
       el: paginationSelector,
@@ -33,29 +30,43 @@ initSwiper(".styleSwiper", ".style-pagination");
 initSwiper(".wordsSwiper", ".words-pagination");
 
 
-  const splide = new Splide('.wordsSplide', {
-    type: 'loop',
-    gap: '30px',
-    speed: 600,
-    pagination: true,
-    arrows: false,
-    autoHeight: true,
+function initWordsSplide() {
 
-    autoWidth: true,
-    focus: 'center',
-  });
+const splide = new Splide(".wordsSplide", {
+  type: "loop",
+  gap: "30px",
+  speed: 600,
+  pagination: true,
+  arrows: false,
+  autoHeight: true,
 
-  splide.mount();
+  autoWidth: true,
+  focus: "center",
 
-    setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-  }, 50);
+  breakpoints: {
+    1200: {
+      autoWidth: false,
+      perPage: 1,
+      focus: "center",
+      gap: "16px",
+    },
+   
+  },
+});
 
-  document.querySelector('.wordsSplide').addEventListener('click', (e) => {
-    const slide = e.target.closest('.splide__slide');
-    if (!slide) return;
+splide.mount();
 
-    const index = [...slide.parentElement.children].indexOf(slide);
+setTimeout(() => {
+  window.dispatchEvent(new Event("resize"));
+}, 50);
 
-    splide.go(index); 
-  });
+document.querySelector(".wordsSplide").addEventListener("click", (e) => {
+  const slide = e.target.closest(".splide__slide");
+  if (!slide) return;
+
+  const index = [...slide.parentElement.children].indexOf(slide);
+
+  splide.go(index);
+});
+}
+window.addEventListener("load", initWordsSplide);
