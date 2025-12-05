@@ -48,6 +48,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   splide.mount();
 
+    setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+  }, 50);
+
   document.querySelector('.wordsSplide').addEventListener('click', (e) => {
     const slide = e.target.closest('.splide__slide');
     if (!slide) return;
