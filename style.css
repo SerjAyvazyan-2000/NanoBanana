@@ -601,13 +601,8 @@ body {
   gap: 15px;
   align-items: center;
   justify-content: center;
-  /* bottom: -30px !important; */
-    bottom: calc(-20px + env(safe-area-inset-bottom));
-}
-@supports (bottom: constant(safe-area-inset-bottom)) {
-  .splide__pagination {
-    bottom: calc(-20px + constant(safe-area-inset-bottom));
-  }
+  bottom: -30px !important;
+  
 }
 .splide__pagination__page{
     width: 14px !important;
@@ -806,6 +801,7 @@ body {
 }
 .splide__pagination{
   gap: 10px;
+    bottom: -20px !important;
 }
 .splide__pagination__page{
   width: 8px !important;
