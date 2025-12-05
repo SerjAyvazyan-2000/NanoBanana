@@ -367,7 +367,7 @@ body {
 
 .a-info-slider-section {
   margin: 120px 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .swiper-pagination-bullet {
