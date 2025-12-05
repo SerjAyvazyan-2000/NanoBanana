@@ -5,6 +5,7 @@ function initSwiper(selector, paginationSelector) {
     spaceBetween: 30,
     loop: true,
     speed: 600,
+ 
 
     pagination: {
       el: paginationSelector,
