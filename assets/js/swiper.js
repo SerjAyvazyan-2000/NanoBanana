@@ -40,6 +40,7 @@ function initWordsSplide() {
     speed: 600,
     pagination: true,
     arrows: false,
+    autoHeight: true,
 
     autoWidth: true,
     focus: "center",
