@@ -61,36 +61,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
+// document.addEventListener("DOMContentLoaded", () => {
+//   gsap.registerPlugin(ScrollTrigger);
 
-  const fadeAnimations = [
-    { selector: ".fade-left", from: { x: -40 } },
-    { selector: ".fade-right", from: { x: 40 } },
-    { selector: ".fade-top", from: { y: -40 } },
-    { selector: ".fade-bottom", from: { y: 40 } },
-  ];
+//   const fadeAnimations = [
+//     { selector: ".fade-left", from: { x: -40 } },
+//     { selector: ".fade-right", from: { x: 40 } },
+//     { selector: ".fade-top", from: { y: -40 } },
+//     { selector: ".fade-bottom", from: { y: 40 } },
+//   ];
 
-  fadeAnimations.forEach(({ selector, from }) => {
-    gsap.utils.toArray(selector).forEach((el) => {
-      gsap.fromTo(
-        el,
-        { ...from, opacity: 0, visibility: "visible" },
-        {
-          x: 0,
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 90%",
-            end: "bottom 10%",
-            once: true, 
+//   fadeAnimations.forEach(({ selector, from }) => {
+//     gsap.utils.toArray(selector).forEach((el) => {
+//       gsap.fromTo(
+//         el,
+//         { ...from, opacity: 0, visibility: "visible" },
+//         {
+//           x: 0,
+//           y: 0,
+//           opacity: 1,
+//           duration: 1,
+//           ease: "power3.out",
+//           scrollTrigger: {
+//             trigger: el,
+//             start: "top 90%",
+//             end: "bottom 10%",
+//             once: true, 
           
-          },
-        }
-      );
-    });
-  });
-});
+//           },
+//         }
+//       );
+//     });
+//   });
+// });
