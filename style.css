@@ -366,8 +366,7 @@ body {
 }
 
 .a-info-slider-section {
-  margin: 120px 0;
-  /* overflow: hidden; */
+  margin: 20px 0 120px 0 ;
 }
 
 .swiper-pagination-bullet {
@@ -469,9 +468,7 @@ body {
   margin-left: 50px;
 }
 
-.a-faq-section {
-  margin: 50px 0;
-}
+
 
 .a-faq-section .a-faq-info {
   display: flex;
@@ -619,26 +616,6 @@ body {
   overflow: hidden !important;
 }
 
-@supports (-webkit-touch-callout: none) {
-  .splide__track {
-    overflow: visible !important;
-  }
-
-  .splide__list {
-    align-items: center !important;
-  }
-
-  .splide__slide {
-    height: auto !important;
-    transform: translateZ(0); /* фикс скачков */
-  }
-
-  .splide__slide--clone {
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-}
 
 
 
