@@ -57,3 +57,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animatedItems.forEach((item) => observer.observe(item));
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Fade-left
+  gsap.utils.toArray(".fade-left").forEach((el) => {
+    gsap.fromTo(
+      el,
+      { x: -40, opacity: 0, visibility: "visible" },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+        },
+      }
+    );
+  });
+
+  // Fade-right
+  gsap.utils.toArray(".fade-right").forEach((el) => {
+    gsap.fromTo(
+      el,
+      { x: 40, opacity: 0, visibility: "visible" },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+        },
+      }
+    );
+  });
+
+  // Fade-top
+  gsap.utils.toArray(".fade-top").forEach((el) => {
+    gsap.fromTo(
+      el,
+      { y: -40, opacity: 0, visibility: "visible" },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+        },
+      }
+    );
+  });
+
+  // Fade-bottom
+  gsap.utils.toArray(".fade-bottom").forEach((el) => {
+    gsap.fromTo(
+      el,
+      { y: 40, opacity: 0, visibility: "visible" },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+        },
+      }
+    );
+  });
+});
+
