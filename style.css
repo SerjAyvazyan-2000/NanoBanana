@@ -615,9 +615,7 @@ body {
 .splide__pagination li{
   display: flex;
 }
-.wordsSplide {
-  margin-bottom: 40px;
-}
+
 @media (max-width: 1200px) {
   .detailsSwiper .swiper-slide {
     width: inherit;
