@@ -615,6 +615,32 @@ body {
 .splide__pagination li{
   display: flex;
 }
+.splide__track {
+  overflow: hidden !important;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .splide__track {
+    overflow: visible !important;
+  }
+
+  .splide__list {
+    align-items: center !important;
+  }
+
+  .splide__slide {
+    height: auto !important;
+    transform: translateZ(0); /* фикс скачков */
+  }
+
+  .splide__slide--clone {
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+
 
 @media (max-width: 1200px) {
   .detailsSwiper .swiper-slide {

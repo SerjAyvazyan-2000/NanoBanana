@@ -40,8 +40,6 @@ function initWordsSplide() {
     speed: 600,
     pagination: true,
     arrows: false,
-    autoHeight: true,
-
     autoWidth: true,
     focus: "center",
 
@@ -101,14 +99,3 @@ function fixSplide(splide) {
 window.addEventListener("load", initWordsSplide);
 
 
-window.addEventListener("load", () => {
-  splide.refresh();
-});
-
-splide.on("mounted", () => {
-  splide.refresh();
-});
-
-window.addEventListener("load", () => {
-  setTimeout(() => splide.refresh(), 100);
-});
