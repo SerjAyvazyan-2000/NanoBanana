@@ -581,21 +581,18 @@ body {
 @media (max-width: 1200px) {
   .detailsSwiper .swiper-slide {
     width: inherit;
-    margin: 0 10px !important;
   }
   .detailsSwiper {
     padding: 0 14px ;
   }
   .styleSwiper .swiper-slide {
     width: inherit;
-    margin: 0 10px !important;
   }
   .styleSwiper {
     padding: 0 14px ;
   }
   .wordsSwiper .swiper-slide {
     width: inherit;
-    margin: 0 10px !important;
   }
   .wordsSwiper {
     padding: 0 14px ;
@@ -690,7 +687,7 @@ body {
   }
   .a-hero-info {
     width: calc(100% + 30px);
-    margin-left: -15px;
+    margin-left: -15px !important;
     margin: 38px auto 0 ;
   }
   .a-info-slider-section {
