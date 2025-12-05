@@ -796,11 +796,11 @@ body {
   height: 7px !important;
   border-radius: 100px !important;
   background: #386FDE !important;
-  bottom: -20px !important;
+
 }
 .splide__pagination{
-  margin-top: 10px !important;
   gap: 10px;
+    bottom: -20px !important;
 }
 .splide__pagination__page{
   width: 8px !important;
